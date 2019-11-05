@@ -14,4 +14,4 @@ Projeto para a segunda nota da disciplina de Programação Orientada a Objetos d
 ### Instalação
 1. Clonar o repositório na sua pasta de Projetos
 2. Abrir o NetBeans e abrir o projeto através da pasta onde o repositório foi clonado
-3. Executar a classe TelaInicial para dar início ao programa
+3. Executar a classe TelaPrograma para carregar a interface e dar início ao programa
