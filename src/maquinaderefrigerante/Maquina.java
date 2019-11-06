@@ -53,18 +53,11 @@ public class Maquina {
             return moeda.getQtd();
         }
         return -1;
-    }
-
-    public boolean verificaTroco(double dinheiro, double preco) {
-        double troco = dinheiro - preco;
-        moedas.get(0).getValor();
-        return false;
-    }  
+    } 
     
     public double geraTroco(double dinheiro, double valor) {
         double troco = dinheiro - valor;
         double valorTroco = 0;
-        String strTroco;
         int i = 0;
         while (troco > 0) {
             if (troco >= moedas.get(i).getValor() && moedas.get(i).getQtd() > 0) {
@@ -79,7 +72,6 @@ public class Maquina {
                 i++;
             }
         }
-        
         return valorTroco;
     }
 }
