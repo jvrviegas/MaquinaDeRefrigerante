@@ -13,15 +13,17 @@ import java.util.Scanner;
  * @author joaovvr
  */
 public class IniciarPrograma {
+    // Função para exibir várias quebras de linha com o intuito de "limpar" o console
     public static void limpatela() { System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"); }
     
     public static void main(String args[]) {
         ArrayList<Refrigerante> refrigerantes = new ArrayList<>();
         ArrayList<Moeda> moedas = new ArrayList<>();   
         Scanner sc = new Scanner(System.in);
-        int opcao = -1, opc = -1;
+        int opcao = -1, opc;
         double dinheiro;
         
+        // Cria os refrigerantes e define seus valores e quantidades como sendo 0
         Refrigerante refri01 = new Refrigerante("Coca-Cola", 0, 0);
         Refrigerante refri02 = new Refrigerante("Guaraná Jesus", 0, 0);
         Refrigerante refri03 = new Refrigerante("Guaraná Antárctica", 0, 0);
@@ -29,12 +31,14 @@ public class IniciarPrograma {
         Refrigerante refri05 = new Refrigerante("Sprite", 0, 0);
         Refrigerante refri06 = new Refrigerante("Fanta Laranja", 0, 0);
         
+        // Cria as moedas e define suas quantidades como sendo 0
         Moeda moeda10 = new Moeda(10, 0);        
         Moeda moeda05 = new Moeda(5, 0);
         Moeda moeda02 = new Moeda(2, 0);
         Moeda moeda01 = new Moeda(1, 0);
         Moeda moeda050 = new Moeda(0.5, 0);
    
+        // Laço para iterar o menu principal enquanto o usuário não digitar 0
         while(opcao != 0){
             System.out.println("------------------ MÁQUINA DE REFRIGERANTE ---------------------\n");
             System.out.println("Menu:\n1. Gerenciar refrigerantes \n2. Gerenciar moedas \n3. Iniciar máquina \n0. Sair");
@@ -42,7 +46,9 @@ public class IniciarPrograma {
             opcao = sc.nextInt();
             opc = -1;
             switch(opcao){
+                // Opção para acesso ao menu de gerenciar refrigerantes
                 case 1:
+                    // Laço para iterar o menu de gerenciamento de refrigerantes
                     while(opc != 0){
                         System.out.println("------------------- GERENCIAR REFRIGERANTES -------------------\n");
                         System.out.println("Selecione qual refrigerante deseja alterar:");
@@ -55,6 +61,8 @@ public class IniciarPrograma {
                                 "\n0. Voltar");
                         System.out.println("Opção:");
                         opc = sc.nextInt();
+                        
+                        // Switch para realizar a alteração da quantidade e preço do refrigerante conforme a opção escolhida
                         switch(opc){
                             case 1:
                                 System.out.println("------------ ALTERAR COCA-COLA --------------\n");
@@ -104,7 +112,10 @@ public class IniciarPrograma {
                         }
                     }
                     break;
+                    
+                // Opção para acesso ao menu de gerenciar moedas
                 case 2:
+                    // Laço para iterar o menu de gerenciamento de moedas
                     while(opc != 0){
                         System.out.println("------------------- GERENCIAR MOEDAS -------------------\n");
                         System.out.println("Selecione qual moeda deseja alterar a quantidade:");
@@ -116,6 +127,8 @@ public class IniciarPrograma {
                                 "\n0. Voltar");
                         System.out.println("Opção:");
                         opc = sc.nextInt();
+                        
+                        // Switch para realizar a alteração da quantidade da moeda conforme a opção escolhida
                         switch(opc){
                             case 1:
                                 System.out.println("------------ ALTERAR R$0,50 --------------\n");
@@ -148,26 +161,33 @@ public class IniciarPrograma {
                         }
                     }
                     break;
+                    
+                // Opção para iniciar a máquina de refrigerante    
                 case 3:
                     Refrigerante escolhido;
                     limpatela();
+                    
+                    // Prepara os refrigerantes para serem adicionados à máquina, adicionando-os primeiro a um array
                     refrigerantes.add(refri01);
                     refrigerantes.add(refri02);
                     refrigerantes.add(refri03);
                     refrigerantes.add(refri04);
                     refrigerantes.add(refri05);
                     refrigerantes.add(refri06);
-
+                    
+                    // Prepara as moedas para serem adicionadas à máquina, adicionando-as primeiro a um array
                     moedas.add(moeda10);
                     moedas.add(moeda05);
                     moedas.add(moeda02);
                     moedas.add(moeda01);
                     moedas.add(moeda050);
+                    
+                    // Cria a máquina e atribui os arrays de refrigerantes e moedas à ela
                     Maquina maquina = new Maquina(refrigerantes, moedas);
                     
-                    // Código 999 - Acesso área administrativa
+                    // Laço para iterar o menu da máquina de refrigerante - OBS: o código 999 retorna ao menu administrativo
                     while(opc != 999){
-                        double troco = 0;
+                        double troco;
                         System.out.println("------------------ MÁQUINA DE REFRIGERANTE ---------------------\n");
                         System.out.println("Selecione o refrigerante:");
                         System.out.println("1. Coca-Cola - R$"+maquina.buscarRefrigerante("Coca-Cola").getPreco()+
@@ -176,18 +196,27 @@ public class IniciarPrograma {
                                 "\n4. Pepsi - R$"+maquina.buscarRefrigerante("Pepsi").getPreco()+
                                 "\n5. Sprite - R$"+maquina.buscarRefrigerante("Sprite").getPreco()+
                                 "\n6. Fanta Laranja - R$"+maquina.buscarRefrigerante("Fanta Laranja").getPreco()
-                        );                        
+                        );
+
+                        // Recebe a opção de refrigerante e o dinheiro
                         System.out.println("Opção:");
                         opc = sc.nextInt();
                         System.out.println("\nInsira o dinheiro: R$");
                         dinheiro = sc.nextDouble();
+                        
+                        // Switch para realizar as operações conforme a escolha do refrigerante
                         switch(opc){
                             case 1:
                                 escolhido = maquina.buscarRefrigerante("Coca-Cola");
+                                // Verifica se o dinheiro recebido é maior que o valor do refrigerante
                                 if(dinheiro >= escolhido.getPreco()){
+                                    // Verifica se existe quantidade disponível do refrigerante
                                     if(escolhido.getQtd() > 0){
                                         troco = maquina.geraTroco(dinheiro, escolhido.getPreco());
+                                        // Verifica se há troco disponível
                                         if(troco > -1){
+                                            // Retorna o refrigerante escolhido e o troco
+                                            maquina.buscarRefrigerante("Coca-Cola").decrementaQtd();
                                             System.out.println("Refrigerante: "+escolhido.getSabor()+"\nTroco: R$"+troco);
                                         }
                                         else{
@@ -204,10 +233,15 @@ public class IniciarPrograma {
                                 break;
                             case 2:
                                 escolhido = maquina.buscarRefrigerante("Guaraná Jesus");
+                                // Verifica se o dinheiro recebido é maior que o valor do refrigerante
                                 if(dinheiro >= escolhido.getPreco()){
+                                    // Verifica se existe quantidade disponível do refrigerante
                                     if(escolhido.getQtd() > 0){
                                         troco = maquina.geraTroco(dinheiro, escolhido.getPreco());
+                                        // Verifica se há troco disponível
                                         if(troco > -1){
+                                            // Retorna o refrigerante escolhido e o troco
+                                            maquina.buscarRefrigerante("Guaraná Jesus").decrementaQtd();
                                             System.out.println("Refrigerante: "+escolhido.getSabor()+"\nTroco: R$"+troco);
                                         }
                                         else{
@@ -224,10 +258,15 @@ public class IniciarPrograma {
                                 break;
                             case 3:
                                 escolhido = maquina.buscarRefrigerante("Guaraná Antárctica");
+                                // Verifica se o dinheiro recebido é maior que o valor do refrigerante
                                 if(dinheiro >= escolhido.getPreco()){
+                                    // Verifica se existe quantidade disponível do refrigerante
                                     if(escolhido.getQtd() > 0){
                                         troco = maquina.geraTroco(dinheiro, escolhido.getPreco());
+                                        // Verifica se há troco disponível
                                         if(troco > -1){
+                                            // Retorna o refrigerante escolhido e o troco
+                                            maquina.buscarRefrigerante("Guaraná Antárctica").decrementaQtd();
                                             System.out.println("Refrigerante: "+escolhido.getSabor()+"\nTroco: R$"+troco);
                                         }
                                         else{
@@ -244,10 +283,15 @@ public class IniciarPrograma {
                                 break;
                             case 4:
                                 escolhido = maquina.buscarRefrigerante("Pepsi");
+                                // Verifica se o dinheiro recebido é maior que o valor do refrigerante
                                 if(dinheiro >= escolhido.getPreco()){
+                                    // Verifica se existe quantidade disponível do refrigerante
                                     if(escolhido.getQtd() > 0){
                                         troco = maquina.geraTroco(dinheiro, escolhido.getPreco());
+                                        // Verifica se há troco disponível
                                         if(troco > -1){
+                                            // Retorna o refrigerante escolhido e o troco
+                                            maquina.buscarRefrigerante("Pepsi").decrementaQtd();
                                             System.out.println("Refrigerante: "+escolhido.getSabor()+"\nTroco: R$"+troco);
                                         }
                                         else{
@@ -264,10 +308,15 @@ public class IniciarPrograma {
                                 break;
                             case 5:
                                 escolhido = maquina.buscarRefrigerante("Sprite");
+                                // Verifica se o dinheiro recebido é maior que o valor do refrigerante
                                 if(dinheiro >= escolhido.getPreco()){
+                                    // Verifica se existe quantidade disponível do refrigerante
                                     if(escolhido.getQtd() > 0){
                                         troco = maquina.geraTroco(dinheiro, escolhido.getPreco());
+                                        // Verifica se há troco disponível
                                         if(troco > -1){
+                                            // Retorna o refrigerante escolhido e o troco
+                                            maquina.buscarRefrigerante("Sprite").decrementaQtd();
                                             System.out.println("Refrigerante: "+escolhido.getSabor()+"\nTroco: R$"+troco);
                                         }
                                         else{
@@ -284,10 +333,15 @@ public class IniciarPrograma {
                                 break;
                             case 6:
                                 escolhido = maquina.buscarRefrigerante("Fanta Laranja");
+                                // Verifica se o dinheiro recebido é maior que o valor do refrigerante
                                 if(dinheiro >= escolhido.getPreco()){
+                                    // Verifica se existe quantidade disponível do refrigerante
                                     if(escolhido.getQtd() > 0){
                                         troco = maquina.geraTroco(dinheiro, escolhido.getPreco());
+                                        // Verifica se há troco disponível
                                         if(troco > -1){
+                                            // Retorna o refrigerante escolhido e o troco
+                                            maquina.buscarRefrigerante("Fanta Laranja").decrementaQtd();
                                             System.out.println("Refrigerante: "+escolhido.getSabor()+"\nTroco: R$"+troco);
                                         }
                                         else{

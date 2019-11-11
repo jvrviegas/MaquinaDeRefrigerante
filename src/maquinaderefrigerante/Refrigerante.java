@@ -28,11 +28,6 @@ public class Refrigerante {
     public void setSabor(String sabor) {
         this.sabor = sabor;
     }
-    
-    public Refrigerante(double preco, int quantidade){
-        this.preco = preco;
-        this.qtd = quantidade;
-    }
 
     public int getQtd() {
         return qtd;

@@ -21,6 +21,7 @@ public class Maquina {
         this.moedas = moedas;
     }
 
+    // Método para buscar e retornar o refrigerante com base no nome (sabor)
     public Refrigerante buscarRefrigerante(String sabor) {
         for (int i = 0; i < this.refrigerantes.size(); i++) {
             if (refrigerantes.get(i).getSabor().equals(sabor)) {
@@ -30,6 +31,7 @@ public class Maquina {
         return null;
     }
 
+    // Método para verificar a quantidade do refrigerante
     public int verificaQtdRefri(String sabor) {
         Refrigerante refri = this.buscarRefrigerante(sabor);
         if (refri != null && refri.getQtd() > 0) {
@@ -38,6 +40,7 @@ public class Maquina {
         return -1;
     }
 
+    // Método para buscar e retornar a moeda com base no seu valor
     public Moeda buscarMoeda(double valor) {
         for (int i = 0; i < this.moedas.size(); i++) {
             if (moedas.get(i).getValor() == valor) {
@@ -47,6 +50,7 @@ public class Maquina {
         return null;
     }
 
+    // Método para verificar a quantidade da moeda
     public int verificaQtdMoeda(double valor) {
         Moeda moeda = this.buscarMoeda(valor);
         if (moeda != null && moeda.getQtd() > 0) {
@@ -55,6 +59,7 @@ public class Maquina {
         return -1;
     } 
     
+    // Método para verificar se é possível gerar troco, caso seja, retorna o valor do troco, do contrário retorna -1
     public double geraTroco(double dinheiro, double valor) {
         double troco = dinheiro - valor;
         double valorTroco = 0;
