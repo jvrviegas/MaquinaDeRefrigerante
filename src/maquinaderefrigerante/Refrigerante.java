@@ -6,10 +6,7 @@
 package maquinaderefrigerante;
 
 
-/**
- *
- * @author joaovvr
- */
+
 public class Refrigerante {
     private String sabor;
     private double preco;

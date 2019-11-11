@@ -7,10 +7,7 @@ package maquinaderefrigerante;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author joaovvr
- */
+
 public class Maquina {
 
     private ArrayList<Refrigerante> refrigerantes = new ArrayList<>();

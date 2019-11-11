@@ -5,10 +5,7 @@
  */
 package maquinaderefrigerante;
 
-/**
- *
- * @author joaovvr
- */
+
 public class Moeda {
     double valor;
     int qtd;

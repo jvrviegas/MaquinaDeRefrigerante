@@ -5,18 +5,16 @@
  */
 package maquinaderefrigerante;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- *
- * @author joaovvr
- */
+
 public class IniciarPrograma {
     // Função para exibir várias quebras de linha com o intuito de "limpar" o console
     public static void limpatela() { System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"); }
     
-    public static void main(String args[]) {
+    public static void main(String args[]) throws IOException {
         ArrayList<Refrigerante> refrigerantes = new ArrayList<>();
         ArrayList<Moeda> moedas = new ArrayList<>();   
         Scanner sc = new Scanner(System.in);
@@ -218,17 +216,25 @@ public class IniciarPrograma {
                                             // Retorna o refrigerante escolhido e o troco
                                             maquina.buscarRefrigerante("Coca-Cola").decrementaQtd();
                                             System.out.println("Refrigerante: "+escolhido.getSabor()+"\nTroco: R$"+troco);
+                                            System.out.println("\nAperte enter para continuar");
+                                        System.in.read();
                                         }
                                         else{
                                             System.out.println("Não há troco disponível, por favor insira uma quantida menor.");
+                                            System.out.println("\nAperte enter para continuar");
+                                            System.in.read();
                                         }
                                     }
                                     else{
                                         System.out.println("Refrigerante indisponível no momento!");
+                                        System.out.println("\nAperte enter para continuar");
+                                        System.in.read();
                                     }
                                 }
                                 else{
                                     System.out.println("Dinheiro insuficiente");
+                                    System.out.println("\nAperte enter para continuar");
+                                    System.in.read();
                                 }
                                 break;
                             case 2:
@@ -243,17 +249,25 @@ public class IniciarPrograma {
                                             // Retorna o refrigerante escolhido e o troco
                                             maquina.buscarRefrigerante("Guaraná Jesus").decrementaQtd();
                                             System.out.println("Refrigerante: "+escolhido.getSabor()+"\nTroco: R$"+troco);
+                                            System.out.println("\nAperte enter para continuar");
+                                            System.in.read();
                                         }
                                         else{
                                             System.out.println("Não há troco disponível, por favor insira uma quantida menor.");
+                                            System.out.println("\nAperte enter para continuar");
+                                            System.in.read();
                                         }
                                     }
                                     else{
                                         System.out.println("Refrigerante indisponível no momento!");
+                                        System.out.println("\nAperte enter para continuar");
+                                        System.in.read();
                                     }
                                 }
                                 else{
                                     System.out.println("Dinheiro insuficiente");
+                                    System.out.println("\nAperte enter para continuar");
+                                    System.in.read();
                                 }
                                 break;
                             case 3:
@@ -268,17 +282,25 @@ public class IniciarPrograma {
                                             // Retorna o refrigerante escolhido e o troco
                                             maquina.buscarRefrigerante("Guaraná Antárctica").decrementaQtd();
                                             System.out.println("Refrigerante: "+escolhido.getSabor()+"\nTroco: R$"+troco);
+                                            System.out.println("\nAperte enter para continuar");
+                                            System.in.read();
                                         }
                                         else{
                                             System.out.println("Não há troco disponível, por favor insira uma quantida menor.");
+                                            System.out.println("\nAperte enter para continuar");
+                                            System.in.read();
                                         }
                                     }
                                     else{
                                         System.out.println("Refrigerante indisponível no momento!");
+                                        System.out.println("\nAperte enter para continuar");
+                                        System.in.read();
                                     }
                                 }
                                 else{
                                     System.out.println("Dinheiro insuficiente");
+                                    System.out.println("\nAperte enter para continuar");
+                                    System.in.read();
                                 }
                                 break;
                             case 4:
@@ -293,17 +315,25 @@ public class IniciarPrograma {
                                             // Retorna o refrigerante escolhido e o troco
                                             maquina.buscarRefrigerante("Pepsi").decrementaQtd();
                                             System.out.println("Refrigerante: "+escolhido.getSabor()+"\nTroco: R$"+troco);
+                                            System.out.println("\nAperte enter para continuar");
+                                            System.in.read();
                                         }
                                         else{
                                             System.out.println("Não há troco disponível, por favor insira uma quantida menor.");
+                                            System.out.println("\nAperte enter para continuar");
+                                            System.in.read();
                                         }
                                     }
                                     else{
                                         System.out.println("Refrigerante indisponível no momento!");
+                                        System.out.println("\nAperte enter para continuar");
+                                        System.in.read();
                                     }
                                 }
                                 else{
                                     System.out.println("Dinheiro insuficiente");
+                                    System.out.println("\nAperte enter para continuar");
+                                    System.in.read();
                                 }
                                 break;
                             case 5:
@@ -318,17 +348,25 @@ public class IniciarPrograma {
                                             // Retorna o refrigerante escolhido e o troco
                                             maquina.buscarRefrigerante("Sprite").decrementaQtd();
                                             System.out.println("Refrigerante: "+escolhido.getSabor()+"\nTroco: R$"+troco);
+                                            System.out.println("\nAperte enter para continuar");
+                                            System.in.read();
                                         }
                                         else{
                                             System.out.println("Não há troco disponível, por favor insira uma quantida menor.");
+                                            System.out.println("\nAperte enter para continuar");
+                                            System.in.read();
                                         }
                                     }
                                     else{
                                         System.out.println("Refrigerante indisponível no momento!");
+                                        System.out.println("\nAperte enter para continuar");
+                                        System.in.read();
                                     }
                                 }
                                 else{
                                     System.out.println("Dinheiro insuficiente");
+                                    System.out.println("\nAperte enter para continuar");
+                                    System.in.read();
                                 }
                                 break;
                             case 6:
@@ -343,22 +381,32 @@ public class IniciarPrograma {
                                             // Retorna o refrigerante escolhido e o troco
                                             maquina.buscarRefrigerante("Fanta Laranja").decrementaQtd();
                                             System.out.println("Refrigerante: "+escolhido.getSabor()+"\nTroco: R$"+troco);
+                                            System.out.println("\nAperte enter para continuar");
+                                            System.in.read();
                                         }
                                         else{
                                             System.out.println("Não há troco disponível, por favor insira uma quantida menor.");
+                                            System.out.println("\nAperte enter para continuar");
+                                            System.in.read();
                                         }
                                     }
                                     else{
                                         System.out.println("Refrigerante indisponível no momento!");
+                                        System.out.println("\nAperte enter para continuar");
+                                        System.in.read();
                                     }
                                 }
                                 else{
                                     System.out.println("Dinheiro insuficiente");
+                                    System.out.println("\nAperte enter para continuar");
+                                    System.in.read();
                                 }
                                 break;
                             default:
                                 if(opc != 999)
                                     System.out.println("Opção inválida");
+                                    System.out.println("\nAperte enter para continuar");
+                                    System.in.read();
                         }
                     }
                     
