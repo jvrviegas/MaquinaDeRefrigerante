@@ -217,7 +217,7 @@ public class IniciarPrograma {
                                             maquina.buscarRefrigerante("Coca-Cola").decrementaQtd();
                                             System.out.println("Refrigerante: "+escolhido.getSabor()+"\nTroco: R$"+troco);
                                             System.out.println("\nAperte enter para continuar");
-                                        System.in.read();
+                                            System.in.read();
                                         }
                                         else{
                                             System.out.println("Não há troco disponível, por favor insira uma quantida menor.");

@@ -7,8 +7,8 @@ package maquinaderefrigerante;
 
 
 public class Moeda {
-    double valor;
-    int qtd;
+    private double valor;
+    private int qtd;
 
     public Moeda(double valor, int qtd) {
         this.valor = valor;
