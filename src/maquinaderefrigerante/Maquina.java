@@ -65,11 +65,11 @@ public class Maquina {
                 valorTroco += moedas.get(i).getValor();
                 troco -= moedas.get(i).getValor();
             }
+            else if (troco < moedas.get(i).getValor()) {
+                i++;
+            }
             else{
                 return -1;
-            }
-            if (troco < moedas.get(i).getValor()) {
-                i++;
             }
         }
         return valorTroco;
